@@ -95,7 +95,7 @@ app.post('/post-backup', (req, res) => { // save back-up to db
                     bearer: 'Aul4lyrF8awcPHKaVrU5LbZkTMcwTUiZWegU4k3XEkm', //token
                 },
                 form: {
-                    message: id, //ข้อความที่จะส่ง
+                    message: 'ทดสอบ', //ข้อความที่จะส่ง
                 },
             }, (err, httpResponse, body) => {
                 if (err) {
