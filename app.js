@@ -147,6 +147,10 @@ app.post('/post-backup', (req, res) => { // save back-up to db
     })
 })
 
+app.get('/', (req, res) => {
+    res.send('hello')
+})
+
 app.post('/post-transfer', (req, res) => { // save back-up to db
     let transferData = req.body
 
