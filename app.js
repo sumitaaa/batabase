@@ -4,7 +4,8 @@ const request = require('request')
 var ObjectId = require('mongodb').ObjectId
 
 var MongoClient = require('mongodb').MongoClient;
-var url = process.env.MONGODB_URI || "mongodb://localhost:27017/mydb";
+// var url = process.env.MONGODB_URI || "mongodb://localhost:27017/mydb";
+var url = 'mongodb://heroku_b3km553l:djt3nhfgnq17tj74sme1rv4ubr@ds157956.mlab.com:57956/heroku_b3km553l'
 
 MongoClient.connect(url, function (err, db) {
     if (err) throw err;
