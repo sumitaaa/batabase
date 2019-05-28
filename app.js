@@ -6,7 +6,7 @@ var ObjectId = require('mongodb').ObjectId
 var MongoClient = require('mongodb').MongoClient;
 var url = process.env.MONGODB_URI || "mongodb://localhost:27017/mydb";
 //MongoClient.connect('mongodb://'+DATABASEUSERNAME+':'+DATABASEPASSWORD+'@'+DATABASEHOST+':'DATABASEPORT+'/'+DATABASENAME,function(err, db){ 
-var url = 'mongodb://database:database123456789@ds157956.mlab.com:57956/heroku_b3km553l/mydb'
+//var url = 'mongodb://database:database123456789@ds157956.mlab.com:57956/heroku_b3km553l/mydb'
 //var url = 'mongodb://heroku_b3km553l:djt3nhfgnq17tj74sme1rv4ubr@ds157956.mlab.com:57956/heroku_b3km553l/mydb'
 
 MongoClient.connect(url, function (err, db) {
