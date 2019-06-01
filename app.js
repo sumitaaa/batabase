@@ -197,15 +197,16 @@ app.post('/post-transfer', (req, res) => { // save back-up to db
 app.post('/get-backup', (req, res) => {
     console.log('tt : ', req.body._id)
     MongoClient.connect(url, function (err, db) {
-
         var dbo = db.db("mydb");
         // db.test.find(ObjectId("4ecc05e55dd98a436ddcc47c")) 
         // dbo.collection("customers").find({}).toArray(function(err, result) 
-        dbo.collection("backup").find(ObjectId(req.body._id)).toArray(function (err, result) {
+        dbo.collection("backup").find(ObjectId.createFromHexString(req.body._id)).toArray(function (err, result) {
             if (err) res.status(400).send(err)
+            console.log('result is : ', result[0])
             res.send(result[0])
         })
     })
+
 })
 app.post('/get-transfer', (req, res) => {
     console.log('tt : ', req.body._id)
@@ -216,6 +217,7 @@ app.post('/get-transfer', (req, res) => {
         // dbo.collection("customers").find({}).toArray(function(err, result) 
         dbo.collection("transfer").find(ObjectId(req.body._id)).toArray(function (err, result) {
             if (err) res.status(400).send(err)
+            console.log('result is : ', result[0])
             res.send(result[0])
         })
     })
